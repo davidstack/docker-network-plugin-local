@@ -58,8 +58,9 @@ type EndPoint struct {
 
 func NewPipeNetworkDriver() *PipeNetworkDriver {
 	fmt.Println("Starting... ")
-	driver := initialCache()
 	os.Mkdir(PluginDataDir, 0700)
+	driver := initialCache()
+
 	//watcher, _ := NewWatcher()
 	//watcher.StartWatch()
 	return &driver
